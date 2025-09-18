@@ -1,3 +1,3 @@
-def fancy_header(text):
-    header = "==========" + text + "=========="
+def fancy_header(text: str):
+    header: str = "==========" + text + "=========="
     print(header)
