@@ -1,7 +1,9 @@
+from typing import List, Dict
+
 # Returns word count
-def word_count(text):
-    words = text.split()
-    count = 0
+def word_count(text: str) -> int:
+    words: List[str] = text.split()
+    count: int = 0
 
     # Go through each word in the list and update count
     for word in words:
@@ -11,11 +13,11 @@ def word_count(text):
     return count
 
 # Returns a dictionary of the count of each character
-def char_count(text):
-    char_dict = {}
+def char_count(text: str) -> Dict:
+    char_dict: Dict = {}
 
     # Splits text into characters
-    split_text = list(text)
+    split_text: List[str] = list(text)
 
     for char in split_text:
         char = char.lower()
@@ -26,12 +28,12 @@ def char_count(text):
     return char_dict
 
 # Helper function
-def sort_num(chars):
+def sort_num(chars: Dict) -> List[Dict]:
     return chars["num"]
 
  # Returns sorted list of word count
-def sorted_char_count(dict):
-    new_dict = []
+def sorted_char_count(dict: Dict) -> None:
+    new_dict: List[Dict] = []
 
     for item in dict:
         if item.isalpha():
