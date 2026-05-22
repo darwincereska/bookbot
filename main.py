@@ -1,9 +1,15 @@
+# main.py Darwin Cereska 5-22-26
+# Runs the main function for the bookbot app
+
 from stats import word_count, char_count, sorted_char_count
 from output import fancy_header
 import sys
 
 # Returns text from book
 def get_book_text(filepath: str) -> str:
+    """
+    Opens file from the filepath parameter and returns the data of it
+    """
     # Opens file
     with open(filepath) as file:
         # Reads content
@@ -13,6 +19,13 @@ def get_book_text(filepath: str) -> str:
     return contents
 
 def main() -> None:
+    correctPassword: bool = False
+    system_password = "TestPass123"
+    while not correctPassword:
+        password = input("Enter your password: ")
+        if password == "test" or password == system_password:
+            correctPassword = True
+
     if len(sys.argv) < 2:
         print("Usage: python3 main.py <path_to_book>")
         sys.exit(1)

@@ -1,7 +1,10 @@
+# stats.py Darwin Cereska 5-22-26
+
 from typing import List, Dict
 
 # Returns word count
 def word_count(text: str) -> int:
+    """Returns the word count from the provided text"""
     words: List[str] = text.split()
     count: int = 0
 
@@ -14,6 +17,7 @@ def word_count(text: str) -> int:
 
 # Returns a dictionary of the count of each character
 def char_count(text: str) -> Dict:
+    """Returns a dictionary of the count for each character"""
     char_dict: Dict = {}
 
     # Splits text into characters
@@ -33,6 +37,7 @@ def sort_num(chars: Dict) -> List[Dict]:
 
  # Returns sorted list of word count
 def sorted_char_count(dict: Dict) -> None:
+    """Sorts a dictionary of character counts"""
     new_dict: List[Dict] = []
 
     for item in dict:
